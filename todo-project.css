@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Playwrite+HR:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+   box-sizing: border-box;
+   margin: 0;
+}
+ body {
+  font-family: "Roboto", sans-serif;
+   /* display: flex;
+   justify-content: center;
+   align-items: center; */
+   display: grid;
+   place-items: center;
+   height: 100vh;
+   letter-spacing: 1px;
+   background-image: url('https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg');
+   background-size: cover;
+   backdrop-filter: blur(10px);
+ }
+ input {
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid gray;
+  outline: none;
+  color: white;
+ }
+ input::placeholder {
+  color: rgb(213, 209, 209);
+ }
+
+ .wrapper {
+ 
+  width: 40%;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  border-radius: 10px;
+  background: #482846ab;
+   min-width: 400px;
+ }
+ .wrapper h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1em;
+  
+ }
+ .wrapper h2 i {
+  color: cyan;
+ }
+ #add-note {
+  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ #add-note input {
+  width: 50%;
+  padding: 12px;
+  margin-right: 5px;
+  font-size: 17px;
+ }
+ #add-note input.error {
+  border: 2px solid red;
+ }
+ #add-note button {
+ padding: 9px;
+ border-radius: 10px;
+ border: 1px solid gray;
+ background: #fff;
+ width: 18%;
+ font-size: 17px;
+ background: lightgrey;
+ cursor: pointer;
+ background: cyan;
+ transition: 0.2s ease-in;
+ }
+
+ #add-note button:active {
+  background: transparent;
+  border: 1px solid cyan;
+  color: #fff;
+ }
+  .content p {
+  color: white;
+  margin: 1em 0;
+  text-align: center;
+  font-size: 17px;
+ } 
+ .content .taskcount {
+  color: cyan;
+ }
+
+
+ .display {
+  background: rgba(105, 98, 98, 0.204);
+  color: white;
+  border-radius: 10px;
+
+ }
+ .task {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 1fr;
+  gap: 10px;
+  padding: 15px 5px;
+ }
+ .task input[type = "checkbox"] {
+  border-radius: 50%;
+  position: relative;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e1e1e1;
+ 
+}
+.task input[type = "checkbox"]:before {
+  content: '' ;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.task input[type = "checkbox"]:checked {
+  background: cyan;
+  border-color: #5a95ff;
+}
+.task input[type = "checkbox"]:checked:before {
+  position: absolute;
+  content: '\f00c';
+  color: black;
+  font-size: 0.9em;
+  font-family: 'font Awesome 5 free';
+  font-weight: 900;
+}
+.task .taskname {
+  font-size: 17px;
+}
+.taskname.complete {
+  text-decoration: line-through;
+}
+.task button {
+  padding: 0.5em 0;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.task .edit {
+  background: cyan;
+}
+.task .delete {
+  background:   #ff2e2e; 
+}
+
+ #search-notes {
+  margin-top: 1em;
+ }
+ #search-notes #search  {
+  padding: 10px;
+  width: 70%;
+  font-size: 16px;
+ }
+ #search-notes label {
+  font-size: 18px;
+  color: #fff;
+ };
+ #search-notes #hide {
+  font-size: 19px;
+ }
+
+
+ /* footer  */
+
+ 
+ footer {
+  /* border: 1px solid white; */
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+ }
+ footer .finish {
+   padding: 10px 40px;
+   background: cyan;
+   border-radius: 30px;
+   font-size: 15px;
+   cursor: pointer;
+   border: none;
+   transition: 0.2s ease-in;
+ }
+ footer  .finish:active {
+  background: transparent;
+  color: white;
+  border: 1px solid cyan;
+ }
+
+ footer .congracts {
+  max-width: 90%;
+  font-size: 16px;
+  line-height: 24px;
+  display: none;
+ }
+ footer .loss {
+  max-width: 90%;
+  font-size: 16px;
+  line-height: 24px;
+  display: none;
+
+ }
+
+ @media (max-width:430px) {
+
+  .wrapper {
+    min-width: 350px;
+  }
+
+  #search-notes #search {
+    /* display: block; */
+    width: 70%;
+  }
+
+
+
+ }
+
+ @media (max-width:360px) {
+
+  .wrapper {
+    font-size: 13px;
+  }
+
+  .wrapper {
+    min-width: 290px;
+    /* margin: 20px 20px; */
+  }
+  #search-notes #search {
+    width: 60%;
+
+  }
+  #search-notes #search::placeholder {
+    font-size: 12px;
+  }
+ 
+
+  #search-notes label {
+    font-size: 13px;
+  }
+  #search-notes #hide {
+    font-size: 13px;
+  }
+  #add-note input {
+    width: 70%;
+    padding: 10px;
+    font-size: 13px;
+   }
+   #add-note input::placeholder {
+    font-size: 12px;
+   }
+ 
+
+   #add-note button {
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: -6px;
+    border: 1px solid gray;
+    background: #fff;
+    width: 25%;
+    font-size: 12px;
+    background: lightgrey;
+    cursor: pointer;
+    background: cyan;
+    transition: 0.2s ease-in;
+    }
+ 
+
+ }

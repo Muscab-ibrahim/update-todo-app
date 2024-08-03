@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The fisrt todo list i built on my own</title>
+  <link rel="stylesheet" href="todo-project.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ 
+  <div class="wrapper">
+    <h2>Todo List App <i class="fa-solid fa-calendar-check"></i></h2>
+    <form id="add-note">
+      <input type="text" id="typing" placeholder="Add task to be done..." >
+      <button id="btn">Add</button>
+    
+    </form>
+
+    <div class="content">
+      <p id="counting">You have <span class="taskcount">0</span> task to complete</p>
+      <div class="display">
+
+      </div>
+    </div>
+   
+
+    <form id="search-notes">
+       <input type="text" placeholder="search notes" id="search">
+      <label for="text">hide all</label>
+      <input type="checkbox"  id="hide">
+    </form>
+
+    <footer>
+      <button class="finish">Finish</button>
+      <p class="congracts">congratulations masaa 	&#128293;, you finished your tasks today &#9989;</p>
+      <span class="loss">you have tasks to complete masaa 	&#10060;</span>
+    </footer>
+  
+
+  </div>
+
+   
+
+  <script src="todo-project.js"></script>
+  
+
+</body>
+</html>
